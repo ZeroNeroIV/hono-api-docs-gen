@@ -1,6 +1,6 @@
 {
   "name": "@zeronerov/hono-api-docs-gen",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Auto-generate API documentation for Hono applications",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
