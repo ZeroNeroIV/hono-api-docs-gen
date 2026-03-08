@@ -1,0 +1,27 @@
+{
+  "name": "@zeronerov/hono-api-docs-gen",
+  "version": "0.1.0",
+  "description": "Auto-generate API documentation for Hono applications",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "rm -rf dist && bun build ./src/index.ts --outdir ./dist --target bun && npx tsc --emitDeclarationOnly --outDir dist",
+    "prepublishOnly": "bun run build"
+  },
+  "peerDependencies": {
+    "hono": "^4.12.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
